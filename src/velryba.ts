@@ -1,9 +1,9 @@
-const fetch = require('node-fetch');
-const cheerio = require('cheerio');
+import cheerio from 'cheerio';
+import fetch from 'node-fetch';
 
 const crawler = () => fetch('https://www.kavarnavelryba.cz/polednimenu/').then((r) => r.text())
 
-const scraper = (data) => {
+const scraper = (data: string) => {
     const $ = cheerio.load(data);
 
     // TODO check date
