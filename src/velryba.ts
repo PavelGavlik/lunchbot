@@ -8,10 +8,14 @@ const scraper = (data: string) => {
 
   // TODO check date
   console.log($('.headline__primary').text() + '\n');
-  console.log(':whale: *Kavárna Velryba*\n', $('.menu-list__item').text().replace(/Kč/g, "Kč\n").trimRight());
+
+  const heading = ':whale: *Kavárna Velryba*\n\n';
+  const menus = $('.menu-list__item').text().replace(/Kč/g, "Kč\n").trim();
+  return heading + menus;
 
   // const [soup, ...rest] = $('.menu-list__item').toArray();
   // console.log(cheerio(soup).text())
 }
 
-crawler().then(scraper);
+
+export const velryba = () => crawler().then(scraper);

@@ -27,11 +27,11 @@ const crawler = () => {
 };
 
 const scraper = (data: ZomatoResponse) => {
-  console.log(':mushroom: *La Loca*\n');
+  const heading = ':mushroom: *La Loca*\n\n';
   const menus = data.daily_menus[0].daily_menu.dishes
     .map(({ dish }) => `${dish.name}\n${dish.price}\n`)
     .join('\n');
-  console.log(menus);
-}
+  return heading + menus;
+};
 
-crawler().then(scraper);
+export const zomato = () => crawler().then(scraper);
