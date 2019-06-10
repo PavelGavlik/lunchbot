@@ -1,6 +1,10 @@
 import fetch from 'node-fetch';
 
-const ZOMATO_API_KEY = 'dcd383753278d533660d82e9d010bd49';
+/* TODO: use these:
+https://www.zomato.com/cs/praha/jin%C3%A1-krajina-nov%C3%A9-m%C4%9Bsto-praha-1/denn%C3%AD-menu
+https://www.zomato.com/cs/praha/bistroos-nov%C3%A9-m%C4%9Bsto-praha-1/denn%C3%AD-menu
+https://www.zomato.com/cs/praha/serial-burgers-nov%C3%A9-m%C4%9Bsto-praha-1/denn%C3%AD-menu
+ */
 
 interface Dish {
   name: string;
@@ -28,6 +32,10 @@ const crawler = () => {
 
 const scraper = (data: ZomatoResponse) => {
   const heading = ':mushroom: *La Loca*\n\n';
+  if (!data.daily_menus.length) {
+    throw new Error('Daily menu is not published yet.')
+  }
+
   const menus = data.daily_menus[0].daily_menu.dishes
     .map(({ dish }) => `${dish.name}\n${dish.price}\n`)
     .join('\n');
