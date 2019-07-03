@@ -10,7 +10,7 @@ const scraper = (data: string) => {
   const today = new Date();
   const todayString = `${today.getDay()}.${today.getMonth() + 1}.`
   if (!dateMatch || dateMatch[0] !== todayString) {
-    throw new Error('Daily menu is out of date.');
+    throw new Error('_Today\'s daily menu was not published._');
   }
 
   const heading = ':whale: *Kavárna Velryba*\n\n';
@@ -20,6 +20,5 @@ const scraper = (data: string) => {
   // const [soup, ...rest] = $('.menu-list__item').toArray();
   // console.log(cheerio(soup).text())
 }
-
 
 export const velryba = () => crawler().then(scraper);
