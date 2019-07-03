@@ -6,8 +6,12 @@ const crawler = () => fetch('https://www.kavarnavelryba.cz/polednimenu/').then((
 const scraper = (data: string) => {
   const $ = cheerio.load(data);
 
-  // TODO check date
-  console.log($('.headline__primary').text() + '\n');
+  const dateMatch = $('.headline__primary').text().match(/[0-9\.]+$/);
+  const today = new Date();
+  const todayString = `${today.getDay()}.${today.getMonth() + 1}.`
+  if (!dateMatch || dateMatch[0] !== todayString) {
+    throw new Error('Daily menu is out of date.');
+  }
 
   const heading = ':whale: *Kavárna Velryba*\n\n';
   const menus = $('.menu-list__item').text().replace(/Kč/g, "Kč\n").trim();
