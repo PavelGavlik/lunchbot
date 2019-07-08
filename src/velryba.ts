@@ -8,7 +8,7 @@ const scraper = (data: string) => {
 
   const dateMatch = $('.headline__primary').text().match(/[0-9\.]+$/);
   const today = new Date();
-  const todayString = `${today.getDay()}.${today.getMonth() + 1}.`
+  const todayString = `${today.getDate()}.${today.getMonth() + 1}.`
   if (!dateMatch || dateMatch[0] !== todayString) {
     throw new Error('_Today\'s daily menu was not published._');
   }
