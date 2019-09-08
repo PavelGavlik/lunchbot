@@ -33,7 +33,7 @@ const crawler = () => {
 const scraper = (data: ZomatoResponse) => {
   const heading = ':mushroom: *La Loca*\n\n';
   if (!data.daily_menus.length) {
-    throw new Error('Daily menu is not published yet.')
+    throw new Error('_Today\'s daily menu was not published._')
   }
 
   const menus = data.daily_menus[0].daily_menu.dishes
