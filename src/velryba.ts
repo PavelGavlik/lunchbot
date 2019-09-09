@@ -3,11 +3,10 @@ import fetch from 'node-fetch';
 
 const crawler = () => fetch('https://www.kavarnavelryba.cz/polednimenu/').then((r) => r.text())
 
-const scraper = (data: string) => {
+export const scraper = (data: string, today = new Date()) => {
   const $ = cheerio.load(data);
 
   const dateMatch = $('.headline__primary').text().match(/[0-9\.]+$/);
-  const today = new Date();
   const todayString = `${today.getDate()}.${today.getMonth() + 1}.`
   if (!dateMatch || dateMatch[0] !== todayString) {
     throw new Error('_Today\'s daily menu was not published._');
