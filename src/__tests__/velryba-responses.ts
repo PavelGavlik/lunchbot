@@ -1,4 +1,4 @@
-export const successResponseDate = new Date("1 February 2019");
+export const successResponseDate = new Date("2000-02-01T00:00:00.000Z");
 
 export const successResponse = `
   <!DOCTYPE html>
