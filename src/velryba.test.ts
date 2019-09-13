@@ -9,6 +9,7 @@ describe('Prague / Kavarna Velryba', () => {
     assert.ok(result.includes('Tomatová polévka s bazalkovým pestem \n39 Kč'), 'contains soup');
     const mainMeal = 'Medailonky \nz vepřové panenky se švestkovou omáčkou s bramborovým pyré\n135 Kč';
     assert.ok(result.includes(mainMeal), 'contains main meal');
+    assert.ok(!result.includes('\nKč'), 'does not contain empty rows');
   });
 
   it('throws if menu is out of date', () => {

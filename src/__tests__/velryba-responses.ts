@@ -1021,9 +1021,9 @@ html,
 <p class="menu-list__item-desc"><span class="desc__content">z vepřové panenky se švestkovou omáčkou s bramborovým pyré</span></p>
 <span class="dots"></span><span class="menu-list__item-price">135 Kč</span></li>
 <li class="menu-list__item">
-<h4 class="menu-list__item-title"><span class="item_title">Spaghetti</span><span class="dots"></span></h4>
-<p class="menu-list__item-desc"><span class="desc__content">pomodoro fresco s bazalkovým pestem a parmezánem</span></p>
-<span class="dots"></span><span class="menu-list__item-price">125 Kč</span></li>
+<h4 class="menu-list__item-title"><span class="item_title"></span><span class="dots"></span></h4>
+<p class="menu-list__item-desc"><span class="desc__content"></span></p>
+<span class="dots"></span><span class="menu-list__item-price">Kč</span></li>
 </ul>
 </div>
 

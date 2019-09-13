@@ -13,11 +13,9 @@ export const scraper = (data: string, today = new Date()) => {
   }
 
   const heading = ':whale: *Kavárna Velryba*\n\n';
-  const menus = $('.menu-list__item').text().replace(/Kč/g, "Kč\n").trim();
+  const isEmptyRow = (index: number, row: CheerioElement) => cheerio(row).text().trim() !== 'Kč';
+  const menus = $('.menu-list__item').filter(isEmptyRow).text().replace(/Kč/g, "Kč\n").trim();
   return heading + menus;
-
-  // const [soup, ...rest] = $('.menu-list__item').toArray();
-  // console.log(cheerio(soup).text())
 }
 
 export const velryba = () => crawler().then(scraper);
