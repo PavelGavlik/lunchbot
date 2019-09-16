@@ -9,7 +9,8 @@
   "scripts": {
     "start": "ts-node src/index.ts",
     "test": "mocha **/*.test.ts",
-    "test:watch": "yarn test --watch"
+    "test:watch": "yarn test --watch",
+    "test:coverage": "nyc npm run test"
   },
   "author": "Pavel Gavlík",
   "license": "MIT",
@@ -23,6 +24,22 @@
     "@types/cheerio": "^0.22.11",
     "@types/mocha": "^5.2.7",
     "@types/node-fetch": "^2.3.3",
-    "mocha": "^6.2.0"
+    "mocha": "^6.2.0",
+    "nyc": "13.2.0"
+  },
+  "nyc": {
+    "extends": "@istanbuljs/nyc-config-typescript",
+    "lines": 50,
+    "all": true,
+    "check-coverage": true,
+    "include": "**/*.ts",
+    "exclude": "**/*.test.ts",
+    "extension": [
+      ".ts"
+    ],
+    "reporter": [
+      "text",
+      "html"
+    ]
   }
 }
