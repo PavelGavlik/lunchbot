@@ -13,20 +13,20 @@ Launches the test suite in the watch mode.
 
 ## Configuration options
 
-Velryba
+#### Velryba
 - no configuration necessary
 
-Zomato
-- apiKey: string
+#### Zomato
+- `apiKey: string`
   - Zomato API key, can be obtained at https://developers.zomato.com/api
-- id: number
+- `id: number`
   - Restautant ID, can be obtained from restautant page ([sample](https://www.zomato.com/la-loca#denni_menu)) source code by searching for RES_ID
-- name: string
+- `name: string`
   - Restaurant name
-- emoji?: string
+- `emoji?: string`
   - optional Slack emoji, defaults to "knife_fork_plate"
 
-Slack
+#### Slack
 - coming soon
 
 ## Available commands
