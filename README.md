@@ -1,6 +1,33 @@
 # lunchbot
 
-Daily menus delivered to your Slack channel
+Daily menus parsed in neat form for copy-pasting to Slack. Like this:
+
+```
+$ yarn start
+yarn run v1.17.3
+$ ts-node src/index.ts
+:whale: *Kavárna Velryba*
+
+Květákový krém se žlutým kari
+39 Kč
+
+Pečené papriky
+plněné pikantní fazolovo-zeleninovým ragú s tomatovou omáčkou
+125 Kč
+
+Steak z kuřecích prsou
+s vinnou omáčkou a parmezánovým bramborem
+125 Kč
+
+Trhané vepřové maso BBQ,
+bílé zelí s jalapeňos, čedar, dresink a hranolky
+125 Kč
+
+Spaghetti
+se sušenými rajčaty, černými olivami, česnekem, chilli a parmezánem
+125 Kč
+✨  Done in 3.77s.
+```
 
 ## Installation
 
@@ -12,6 +39,8 @@ To get this running install:
 Launches the test suite in the watch mode.
 
 ## Configuration options
+
+Edit [src/index.ts](./src/index.ts) to change what is being parsed.
 
 #### Velryba
 - no configuration necessary
@@ -27,7 +56,7 @@ Launches the test suite in the watch mode.
   - optional Slack emoji, defaults to "knife_fork_plate"
 
 #### Slack
-- coming soon
+- [coming soon](https://github.com/PavelGavlik/lunchbot/issues/3)
 
 ## Available commands
 
