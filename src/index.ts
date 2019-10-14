@@ -16,4 +16,4 @@ const serialBurgers = zomato({
 });
 Promise.all([jinaKrajina, serialBurgers, velryba()]
   .map(promise => promise.catch((error: Error) => error.message)))
-  .then((menus) => console.log(menus.join('\n')));
+  .then((menus) => console.log(menus.join('\n\n')));
