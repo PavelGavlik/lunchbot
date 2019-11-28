@@ -1,6 +1,6 @@
 import assert from 'assert';
 import { scraper } from './velryba';
-import { successResponse, successResponseDate } from './__tests__/velryba-responses';
+import { successResponse, successResponseDate } from '../__tests__/velryba-responses';
 
 describe('Prague / Kavarna Velryba', () => {
   it('is able to parse menu', () => {

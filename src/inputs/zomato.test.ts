@@ -49,7 +49,7 @@ describe('Zomato', () => {
     const result = scraper(config)(response, new Date("2000-02-01T23:00:00.000Z"));
     assert.ok(result.includes(':hamburger: *Moe\'s*'), 'contains heading')
     assert.ok(result.includes('bálkánská s masem\n10 Kč'), 'contains soup')
-    const mainMeal = '„Bulgurové rizoto“ s haloumi sýrem, grilovanou zeleninou, sušeným rajčetem a pažitkovým krémem se zakysané smetany, zeleninový salátek\n125 Kč';
+    const mainMeal = '„bulgurové rizoto“ s haloumi sýrem, grilovanou zeleninou, sušeným rajčetem a pažitkovým krémem se zakysané smetany, zeleninový salátek\n125 Kč';
     assert.ok(result.includes(mainMeal), 'contains main meal')
   });
 

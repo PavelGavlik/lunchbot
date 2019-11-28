@@ -44,7 +44,7 @@ export const scraper = (config: ZomatoConfig) => (data: ZomatoResponse, today = 
   }
 
   const menus = data.daily_menus[0].daily_menu.dishes
-    .map(({ dish }) => `${dish.name.trim().replace(/ +/g, ' ')}\n${dish.price}\n`)
+    .map(({ dish }) => `${dish.name.trim().toLowerCase().replace(/ +/g, ' ')}\n${dish.price}\n`)
     .join('\n');
   return heading + menus;
 };
