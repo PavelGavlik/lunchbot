@@ -2,7 +2,7 @@
   "name": "prague-lunchbot",
   "version": "1.0.0",
   "engines": {
-    "node": "^12.6.0",
+    "node": "^12.6.0 || ^13.0.0",
     "yarn": "^1.12.3"
   },
   "main": "index.js",
