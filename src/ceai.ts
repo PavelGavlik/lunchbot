@@ -1,5 +1,5 @@
-import { velryba } from './velryba';
-import { zomato } from './zomato';
+import { velryba } from './inputs/velryba';
+import { zomato } from './inputs/zomato';
 
 const apiKey = 'dcd383753278d533660d82e9d010bd49';
 const jinaKrajina = zomato({
