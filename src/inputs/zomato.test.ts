@@ -1,5 +1,5 @@
 import assert from 'assert';
-import { scraper, ZomatoResponse } from './zomato';
+import { scraper, ZomatoResponse } from './zomato.js';
 
 describe('Zomato', () => {
   const config = {

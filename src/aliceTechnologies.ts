@@ -1,4 +1,4 @@
-import { zomato } from './inputs/zomato';
+import { zomato } from './inputs/zomato.js';
 
 const apiKey = 'dcd383753278d533660d82e9d010bd49';
 const frida = zomato({

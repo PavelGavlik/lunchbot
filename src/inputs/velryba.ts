@@ -13,7 +13,7 @@ export const scraper = (data: string, today = new Date()) => {
   }
 
   const heading = ':whale: *Kavárna Velryba*\n\n';
-  const isEmptyRow = (index: number, row: CheerioElement) => cheerio(row).text().trim() !== 'Kč';
+  const isEmptyRow = (index: number, row: cheerio.Element) => cheerio(row).text().trim() !== 'Kč';
   const menus = $('.menu-list__item').filter(isEmptyRow).text().replace(/Kč/g, "Kč\n").trim();
   return heading + menus;
 }

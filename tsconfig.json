@@ -4,11 +4,11 @@
         "skipLibCheck": false,
         "strict": true,
         "forceConsistentCasingInFileNames": true,
-        "module": "commonjs",
+        "module": "ES2020",
+        "target": "ES2020",
         "esModuleInterop": true,
-        "target": "es6",
         "noImplicitAny": true,
-        "moduleResolution": "node",
+        "moduleResolution": "Node",
         "sourceMap": true,
         "outDir": "dist",
         "baseUrl": ".",
@@ -24,5 +24,8 @@
     },
     "include": [
         "src/**/*"
-    ]
+    ],
+    "ts-node": {
+      "esm": true
+    }
 }

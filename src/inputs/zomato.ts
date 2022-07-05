@@ -31,7 +31,7 @@ export const crawler = (config: ZomatoConfig) => {
   }
   const url = `https://developers.zomato.com/api/v2.1/dailymenu?res_id=${config.id}`;
   const headers = { 'user_key': config.apiKey };
-  return fetch(url, { headers }).then((r) => r.json());
+  return fetch(url, { headers }).then((r) => r.json() as Promise<ZomatoResponse>);
 };
 
 const isTodaysDate = (today: Date, data: ZomatoResponse) =>
